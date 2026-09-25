@@ -1,0 +1,1 @@
+@C:\java\zulu17.68.203-ca-jdk17.0.20.1-win_x64\bin\java -jar C:\Users\XE74158\Documents\bookmarks-server\book.jar

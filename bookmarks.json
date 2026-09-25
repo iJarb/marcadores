@@ -1,0 +1,93 @@
+[
+  {
+    "categoria": "BBVA Oficios",
+    "subcategorias": [
+      {
+        "nombre": "Vip",
+        "enlaces": [
+		  {"titulo": "Cloud Search"      , "url": "https://cloudsearch.google.com/cloudsearch?authuser=0"},
+          {"titulo": "CBP Oficios Scrum" , "url": "https://jira.globaldevtools.bbva.com/secure/RapidBoard.jspa?rapidView=48675"},
+          {"titulo": "SDA_54277"         , "url": "https://jira.globaldevtools.bbva.com/browse/E2E-333441"},
+          {"titulo": "Jiras BBVA Oficios", "url": "https://docs.google.com/spreadsheets/d/1eQw1LKgU48r8nr_6fkYAAWtCTUPdh1l_-LtZZwSt4sQ/edit?gid=0#gid=0"},
+          {"titulo": "SMRE_Bitbucket"    , "url": "https://bitbucket.globaldevtools.bbva.com/bitbucket/projects/ES_SMRE_APP-ID-13457_DSG"},
+          {"titulo": "Inf. Dep."         , "url": "https://docs.google.com/spreadsheets/d/1SIhH2ocX02LkyaP3HcI6fTZhj2j7kKoc4SEWwXmZIGI/edit?gid=0#gid=0"},
+          {"titulo": "Drive Oficios2K26" , "url": "https://drive.google.com/drive/folders/1P-_bmYWYuxdM60CtLOeCWcUM-zwyHiP0"},
+          {"titulo": "SMRE_DEV_CON"      , "url": "https://bbva-ether-console-front.appspot.com/app/SMRE0000/13457/ESP/13491"},
+          {"titulo": "SMRE_Pla_APX"      , "url": "https://drive.google.com/drive/folders/1W9mdK_aSkGrEIQuop3K1rEHX6udN4Uke"},
+          {"titulo": "MSA_PRE_ALTA_IA"   , "url": "https://docs.google.com/document/d/1stVqUZPlPb0kC-CvS9I_Ao3a85VlByULBXkjglVW0LM/edit?tab=t.0#heading=h.ebgmx8b5zfn6"},
+          {"titulo": "MSA_HER_OFICIOS"   , "url": "https://drive.google.com/file/d/1rwQnveAq1nBR8EGNtdKbisjOgamkvsY_/view"},
+          {"titulo": "oficios-ia@dev.bbv", "url": "https://mail.google.com/mail/u/1/d/AJBOG-Pxtfl6JrZeXcNpSWp10VE0z2KIXdWnaJF6NoSsQBvBxF65/#inbox"},
+          {"titulo": "Ninjas Rocks"      , "url": "https://sites.google.com/bbva.com/ninjasrocks/inicio"},
+          {"titulo": "infosar"           , "url": "https://bbva-infosar.appspot.com/"}
+        ]
+      },
+      {
+        "nombre": "Vault",
+        "url": "#", 
+        "enlaces": [
+          {"titulo": "Security Arch"     , "url": "https://platform.bbva.com/security-architecture/documentation/1uaeEoqiJW10SI7fdXujKkxrcT4UBjE5RhbrVY98E5QU/cryptography/certificates/webra#h.3u3y154telvw"},
+          {"titulo": "WebRA Provisions"  , "url": "https://docs.google.com/document/d/1AvM7wJzY5MX3FHLRyahJcPvz8JUiBZ6vu6wHZjI4LvI/edit?tab=t.0"},
+		  {"titulo": "Sol Cer WebRA"     , "url": "https://sites.google.com/bbva.com/site-publico-opsdb-nosql-nextg/certificados/solicitud-certificados-webra?pli=1&authuser=0"},
+		  {"titulo": "Gestion Secretos"  , "url": "https://docs.google.com/document/d/1466AJ1O1duPV2ufEIEpg8l-7BKxpGxXiyRISZQ_Ks3U/edit?tab=t.0"},
+		  {"titulo": "GCP Secret Mamager", "url": "https://docs.cloud.google.com/secret-manager/docs/overview?hl=es"}
+        ]
+      },
+	  {
+	    "nombre": "Pdte Ver",
+	    "url": "#", 
+	    "enlaces": [
+	      {"titulo": "Job Alta IA"      , "url": "https://jira.globaldevtools.bbva.com/browse/PROCBRANCH-6249"},
+	      {"titulo": "PSAM"             , "url": "https://sites.google.com/bbva.com/psam-monitoring-operation-hand/soporte/apertura-de-incidenciasconsultas-a-otros-buzones-y-equipos-de-soporte#h.rbekfj2g1pyc"},
+	      {"titulo": "credentials-vault", "url": "https://bbva.ghe.com/ng-channels/bbva-credentials-vault"},
+	      {"titulo": "Seguridad BD"       , "url": "https://sites.google.com/bbva.com/seguridad-ts2bd-new/servicios/peticiones-especiales-en-bbdd"}
+	    ]
+	  },
+	  {
+	    "nombre": "Helix",
+	    "url": "#", 
+	    "enlaces": [
+	      {"titulo": "Crea grupo WebRA", "url": "https://itsmhelixbbva-dwp.onbmc.com/dwp/app/#/itemprofile/481"},
+	      {"titulo": "PSAM", "url": "https://sites.google.com/bbva.com/psam-monitoring-operation-hand/soporte/apertura-de-incidenciasconsultas-a-otros-buzones-y-equipos-de-soporte#h.rbekfj2g1pyc"}	 
+	    ]
+	  },
+	  {
+	    "nombre": "BBDD",
+	    "url": "#", 
+	    "enlaces": [
+	      {"titulo": "Datum", "url": "https://technical-dot-bbva-nhg.appspot.com/"},
+	      {"titulo": "CreaElastic", "url": "https://docs.google.com/document/d/1a4NXQFzj_RukN6irBLwWutuWk96zXpEDHyUqC831KSA/edit?tab=t.0"},
+		  {"titulo": "Modelado Campos Complejos", "url": "https://docs.google.com/document/d/1Ji9-SZSrIe4cyFSNhR6SlD1wyf_FGaT_21DdtnfJH6Q/edit?tab=t.0#heading=h.ebgmx8b5zfn6"}	,
+		  {"titulo": "TC-015", "url": "https://docs.google.com/spreadsheets/d/1HiNiaFSrPL5mr5bc7BDhxuqjyxL4a4gbhr_b6eH4IK0/edit?gid=1815110475#gid=1815110475"} 
+	    ]
+	  }
+  ]
+  },
+  {
+	"categoria": "Netcash",
+	"subcategorias": [
+	  {
+		"nombre": "FWG-ETNC",
+		"url": "#", 
+		"enlaces": [
+		  {"titulo": "HD-EI" , "url": "https://ei-helpdeskpibee.igrupobbva/SESKYOP/kyop_mult_web_pub/index-new.html?PD-VFHOST=ei-communityinterno.grupobbva.com&PD-VF=BAGs3DCCAUsCAQECAgGaAgECAgEABAAEggE4Lp0pcV0sqnSXq/KJe0a/yELh0SMCK4rmYpbYq6y/eeBVjkevXK1nLaS/bpp0oSboW3rcmNv6TOFaApgXqG4uZq/0v9ZDKhANN+pkTwmoq77m/Vpw6VTyv6apq2yjTW8JaYIFrGD6xRQ20VBs726J5J5Y6Qg1WgSd5XA5oDqAXpVdd/QM+a7F+Ql672aBCLiFpky1aAwzRdsc+TLe4CL8nnT47PGrKSMh6GbsGLFbqkHhVLaZL3UGTdlNyEIWoM9xexPeKm/1YExo/0efQ1PQPnoz28ywsyvixsL9M8BWZMJ4e6CsXdgdba2gUsmOCnKgs+xpGRjSGE6J8NKaRN0qNcD4vpDHY604SIaU1csPCIHF3ZkAktrf68mYSk+Y55YCw9vgTm4JvmLpqmTSGloImO3hPWxXrHKt"},
+		  {"titulo": "FWG-EI", "url": "https://ei-contratacionsstt.es.igrupobbva/SESETNC/etnc_mult_web_contratacionssttweb_01/controladoridentificacion/login"},
+		  {"titulo": "SENDA-EI", "url": "https://ei.bbva.es/empresas.html"},
+		  {"titulo": "Agenda Drive", "url": "https://drive.google.com/drive/folders/1S9JJtLOSt_Bsd8JsKGO3cX1G-sB3959n"}
+	  ]
+  }
+  ]},
+  {
+  "categoria": "yo",
+  "subcategorias": [
+    {
+  	"nombre": "misc",
+  	"url": "#", 
+  	"enlaces": [
+  	  {"titulo": "clo2" , "url": "https://cloud.o2online.es/share/f/7_vaYCw0TRCOgX19qh7YSjIwMjczNDU2MDA3NzFfMzIxNjE3"},
+	  {"titulo": "clo2f" , "url": "https://cloud.o2online.es/#folders"}
+	 
+  	]
+	}
+  ]
+  }
+]
