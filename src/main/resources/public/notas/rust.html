@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<title>Rust Tips</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/casual-markdown.css">
+<script src="../js/casual-markdown.js"></script>
+<style>  
+  body { line-height:1.5; margin:auto; padding:3px; max-width:1024px; display:none; FONT-FAMILY:"SEGOE UI",ARIAL; 
+    background-image: url('../img/grunge_patterns.jpg');
+  }
+  h1  { font-size:200%; padding:16px; border:1px solid lightgrey; COLOR:WHITE; BACKGROUND: LINEAR-GRADIENT(TO BOTTOM RIGHT, #06C, #FC0) }
+  h2  { border-bottom:1px solid grey; padding:2px; COLOR:TEAL }
+</style>
+<body onload="document.body.innerHTML=md.html(document.body.innerHTML); document.body.style.display='block';" >
+
+<span style="float:right;padding:6px;color:white"> 
+  <br>---
+</span>
+
+# Rust
+
+## Rust Web Applications
+
+* Meet the Crates
+  * wasm-bindgen
+  * web-sys
+
+* Frameworks
+  * Yew
+  * Leptos
+  * Dioxus
+  * Sycamore
+
+* Ejemplos
+  * [Rust Adventure](https://www.rustadventure.dev/)
+
+* Current limitations
+  * Compile times
+  * Binary sizes
+  * Ecosystem
+
+## Rust Design Patterns
+
+* Builder
+
+~~~ rust
+
+struct EnsaladillaBuilder {
+    components:Vec<EnsaladillaComponent>,
+}
+
+enum EnsaladillaComponent {
+    Huevo,
+    Patata,
+    Bonito,
+    Aceituna,
+    Aceite
+}
+impl EnsaladillaBuilder {
+    fn new()->EnsaladillaBuilder{
+        EnsaladillaBuilder{
+            components:vec![EnsaladillaComponent::Huevo],
+        }
+    }
+    fn add_ingrediente(
+        mut self,component:EnsaladillaComponent
+    )->EnsaladillaBuilder {
+        self.components.push(component);
+        self
+    }
+    pub fn build(mut self)->EnsaladillaBuilder {
+            self.components.push(EnsaladillaComponent::Aceite);
+            self
+    }
+} 
+
+fn main() {
+    println!("Hello, world!");
+    let ensaladilla = EnsaladillaBuilder::new()
+        .add_ingrediente(EnsaladillaComponent::Patata)
+        .add_ingrediente(EnsaladillaComponent::Bonito)
+        .add_ingrediente(EnsaladillaComponent::Aceituna)
+        .add_ingrediente(EnsaladillaComponent::Aceite)
+        .build();
+}
+
+~~~
+
+* State
+  * The "State" pattern is a behavioural design pattern that allows an object to alter its behaviour when its internal state changes. In Rust, like in other programming languages, you can implement the State pattern to encapsulate different states of an object and manage the transitions between those states.
+
+  :vsp | term cargo run --quiet
+
+~~~ rust
+#![allow(unused)]
+trait State {
+    fn process(&self);
+}
+
+struct Start;
+
+impl State for Start {
+    fn process(&self){
+        println!("{:?}","Started");
+    }
+}
+
+struct Running;
+
+impl State for Running {
+    fn process(&self) {
+        println!("{:?}","Running");
+    }
+}
+
+struct Stop;
+
+impl State for Stop {
+    fn process(&self) {
+        println!("{:?}","Stopping");
+    }
+}
+struct StateContext {
+    state: Box<dyn State>
+}
+
+impl StateContext {
+     fn new()->Self{
+        StateContext{state: Box::new(Start{})}
+    }
+     fn set_state(&mut self,s:Box<dyn State>) {
+       self.state = s;
+    }
+    fn process(&self) {
+        self.state.process();
+    }
+}
+
+
+fn main() {
+    println!("Hello, world!");
+    // create a context
+    let mut ctx = StateContext::new();
+    ctx.set_state(Box::new(Running{}));
+    ctx.process();
+    ctx.set_state(Box::new(Stop));
+    ctx.process();
+     
+}
+
+~~~
+
+## Rust OOP
+
+* Polymorphism
+
+~~~ rust
+#![allow(unused)]
+trait State {
+
+~~~
+
+
+## Rust videos
+
+Descripcion                                  | Url                                         | Autor
+---------------------------------------------|---------------------------------------------|-------------------
+Lets Craft Together. Backend Engineer        | https://www.youtube.com/@Semicolon10/videos | Semicolon
+
+

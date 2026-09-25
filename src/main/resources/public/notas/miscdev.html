@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<title>Misc Dev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/casual-markdown.css">
+<script src="../js/casual-markdown.js"></script>
+<style>  
+  body { line-height:1.5; margin:auto; padding:3px; max-width:1024px; display:none; FONT-FAMILY:"SEGOE UI",ARIAL ;
+    background-image: url('../img/grunge_patterns.jpg');
+  }
+  h1  { font-size:200%; padding:16px; border:1px solid lightgrey; COLOR:WHITE; BACKGROUND: LINEAR-GRADIENT(TO BOTTOM RIGHT, #06C, #FC0) }
+  h2  { border-bottom:1px solid grey; padding:2px; COLOR:TEAL }
+</style>
+<body onload="document.body.innerHTML=md.html(document.body.innerHTML); document.body.style.display='block';" >
+
+<span style="float:right;padding:6px;color:white"> 
+  <br>---
+</span>
+
+# Nota
+
+## Sec1
+
+* Simple httpserver
+  * python -m SimpleHTTPServer
+* Apache httpd brew
+  * /opt/homebrew/opt/httpd/bin/httpd -D FOREGROUND
+  * brew services start httpd
+  * DocumentRoot is /opt/homebrew/var/www
+  * /opt/homebrew/etc/httpd/httpd.conf to 8080
+  * /opt/homebrew/etc/httpd/extra/httpd-ssl.conf to 8443
+* Apache httpd default apple
+  * /Library/WebServer/Documents
+  * /etc/apache2/httpd.conf
+  * Start: sudo apachectl start
+  * Restart: sudo apachectl restart
+  * Stop: sudo apachectl stop
+  * apachectl configtest
+
+## Tab1 
+
+WiFi Version       |Year  | Frequency      | Max Speed
+-------------------|------|----------------|-----------
+WiFi 5 (802.11ac)  | 2014 | 5 GHz          | 1.3 Gbps
+WiFi 6 (802.11ax)  | 2019 | 2.4 & 5 GHz    | 9.6 Gbps
+WiFi 6E (Extended) | 2020 | 6 GHz          | 9.6 Gbps
+WiFi 7 (802.11be)  | 2024 | 2.4, 5, & 6 GHz| 46 Gbps
+
+Mobile Gen  | Year  | Desc 
+------------|------------------------------------------------
+ 1G         | 1980s | up to 2.4 kbps , AMPS
+ 2G         | 1990s | up to 1 Mbps   , GSM, CDMA
+ 3G         | 2000s | up to 2 Mbps   , UMTS, HSPA
+ 4G         | 2010s | up to 1 Gbps   , LTE
+ 5G         | 2019–>| up to 10 Gbps  , NR , sub-10 ms latency
+ 6G         | 2030  | up to 100 Gbps , THz

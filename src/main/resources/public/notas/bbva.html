@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<title>BBVA notas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/casual-markdown.css">
+<script src="../js/casual-markdown.js"></script>
+<style>  
+  body { line-height:1.5; margin:auto; padding:3px; max-width:1024px; display:none; FONT-FAMILY:"SEGOE UI",ARIAL ;
+    background-image: url('../img/grunge_patterns.jpg');
+  }
+  h1  { font-size:200%; padding:16px; border:1px solid lightgrey; COLOR:WHITE; BACKGROUND: LINEAR-GRADIENT(TO BOTTOM RIGHT, #06C, #FC0) }
+  h2  { border-bottom:1px solid grey; padding:2px; COLOR:TEAL }
+</style>
+<body onload="document.body.innerHTML=md.html(document.body.innerHTML); document.body.style.display='block';" >
+
+<span style="float:right;padding:6px;color:white"> 
+  <br>---
+</span>
+
+# BBVA Tips
+
+## Granting Tickets
+
+* 001
+
+~~~ json
+
+{    
+   "authentication": {        
+     "consumerID": "00000001",        
+     "authenticationType": "02",        
+     "userID": "0019-012345677J",        
+     "authenticationData": [{                
+       "authenticationData": ["123456"],                
+       "idAuthenticationData": "password"            
+       }]    
+    }
+}
+
+~~~
+
+* 284, 285, 286 y 287
+
+~~~ json
+
+{
+  "authentication" : {
+    "consumerID" : "00000286",
+    "authenticationData" : [{
+        "authenticationData" : [
+          "Q1w2e3r4"
+        ],
+        "idAuthenticationData" : "password"
+      }
+    ],
+    "authenticationType" : "02",
+    "userID" : "bhahn"
+  }
+}
+
+~~~ 
+
+## Datos prueba
+
+UUAA/APP |Nombre         | Valor                    | Descripcion
+---------|---------------|--------------------------|------------
+ETNC/FWG | CuentaCargo   | ES2601821941740201513830 | ...
+ETNC/FWG | CIF Master    | B27012020                | MAUI
+ETNC/FWG | CIF Vinculada | A37999489                | JACOBOCU AVILAOCU NAVARROOCU
+ETNC/FWG | CIF Vinculada | B85711257                | FNMT RCM PRUEBAS
+ETNC/FWG | Ref multicif  | 20096432                 | ...
+
+## WADL
+
+Entorno | SMC          | Url   
+--------|--------------|-----------------------
+PRO     | SMGG20231041 | https://servicios.bbva.es/ASO/signatures/v0/online-contract/?_wadl
+PRO     | SMGG20240770 | https://servicios.bbva.es/ASO/signatures/v0/online-contract/mailgestors/?_wadl
+PRO     | SMGG20240702 | https://servicios.bbva.es/ASO/signatures/v0/online-contract/re-sends/?_wadl
+PRO     | SMGG20240698 | https://servicios.bbva.es/ASO/signatures/v0/online-contract/data/?_wadl
+PRO     | SMGG20231041 | https://portalintranet.es.igrupobbva/ASO/signatures/v0/online-contract/?_wadl
+PRO     | SMGG20240770 | https://portalintranet.es.igrupobbva/ASO/signatures/v0/online-contract/mailgestors/?_wadl
+PRO     | SMGG20240702 | https://portalintranet.es.igrupobbva/ASO/signatures/v0/online-contract/re-sends/?_wadl
+PRO     | SMGG20240698 | https://portalintranet.es.igrupobbva/ASO/signatures/v0/online-contract/data/?_wadl
+PRO     | SMC201910121 | http://arqaso.igrupobbva:7100/financial-management-companies/v0/financial-management-companies/?_wadl
+PRZ     | SMGG20231041 | https://pz-arqaso.igrupobbva:8050/signatures/v0/online-contract/?_wadl
+PRZ     | SMGG20240770 | https://pz-arqaso.igrupobbva:8050/signatures/v0/online-contract/mailgestors/?_wadl
+PRZ     | SMGG20240702 | https://pz-arqaso.igrupobbva:8050/signatures/v0/online-contract/re-sends/?_wadl
+PRZ     | SMGG20240698 | https://pz-arqaso.igrupobbva:8050/signatures/v0/online-contract/data/?_wadl
+PIL     | SMGG20231041 | https://pre-portalintranet.es.igrupobbva/ASO/signatures/v0/online-contract/?_wadl
+PIL     | SMGG20240770 | https://pre-portalintranet.es.igrupobbva/ASO/signatures/v0/online-contract/mailgestors/?_wadl
+PIL     | SMGG20240702 | https://pre-portalintranet.es.igrupobbva/ASO/signatures/v0/online-contract/re-sends/?_wadl
+PIL     | SMGG20240698 | https://pre-portalintranet.es.igrupobbva/ASO/signatures/v0/online-contract/data/?_wadl
+PIL     | SMGG20231041 | https://qa.grupobbva.com/ASO/signatures/v0/online-contract/?_wadl
+PIL     | SMGG20240770 | https://qa.grupobbva.com/ASO/signatures/v0/online-contract/mailgestors/?_wadl
+PIL     | SMGG20240702 | https://qa.grupobbva.com/ASO/signatures/v0/online-contract/re-sends/?_wadl
+PIL     | SMGG20240698 | https://qa.grupobbva.com/ASO/signatures/v0/online-contract/data/?_wadl
+EI      | SMGG20231041 | https://ei-arqaso.igrupobbva:7050/signatures/v0/online-contract/?_wadl
+EI      | SMGG20240770 | https://ei-arqaso.igrupobbva:7050/signatures/v0/online-contract/mailgestors/?_wadl
+EI      | SMGG20240702 | https://ei-arqaso.igrupobbva:7050/signatures/v0/online-contract/re-sends/?_wadl
+EI      | SMGG20240698 | https://ei-arqaso.igrupobbva:7050/signatures/v0/online-contract/data/?_wadl
+
+## Reinicios ASO
+
+Des/Pre | Gre   | Int   | AUS   | OCT   | PIL
+--------|-------|-------|-----------------------
+07:00   | 07:15 | 07:30 |       |       | 07:30
+08:00   | 08:15 |       | 08:45 | 08:00 | 
+09:00   | 09:15 | 09:30 |       |       | 
+10:00   | 10:15 |       |       |       | 
+11:00   | 11:15 | 11:30 | 11:45 |       | 
+12:00   | 12:15 |       |       |       | 
+13:00   | 13:15 | 13:30 |       |       | 
+14:00   | 14:15 |       | 14:45 |       | 
+15:00   | 15:15 | 15:30 |       |       | 15:30
+16:00   | 16:15 |       |       |       | 
+17:00   | 17:15 | 17:30 | 17:45 |       | 
+18:00   | 18:15 |       |       |       | 18:30
+19:00   | 19:15 | 19:30 | 19:45 |       | 
+
+
+## Ventanas Implantacion
+
+Ventana  | Hora   
+---------|-------
+window_1 | 05:30 
+window_2 | 06:30 
+window_3 | 15:30 
+window_4 | 19:30 
+
+## Urls BBVA
+
+Descripcion                     | Url        
+--------------------------------|----------
+Ticketing Corporate Security    | https://bbva-fusion.atlassian.net/servicedesk/customer/portals
+Acceso Remoto VPN - Incidencia  | https://bbva-fusion.atlassian.net/servicedesk/customer/portal/52/create/492
+Administración Seguridad España | https://bbva-fusion.atlassian.net/servicedesk/customer/portal/75/create/919
+Oficina de Perfilado España     | https://bbva-fusion.atlassian.net/servicedesk/customer/portal/329
+Global Identify                 | https://bbva-fusion.atlassian.net/servicedesk/customer/portal/259/create/2066
+Incidencia desde Helix          | https://itsmhelixbbva-smartit.onbmc.com/smartit/app/#/create/incidentPV
+Infosar                         | https://bbva-infosar.appspot.com/
+CGR                             | https://sites.google.com/a/bbva.com/transforma-t/biblioteca/gesti%C3%B3n-de-incidencias-cgr
+Incidencia CGR     Remoto       | https://bbvaworkplace-dwp.onbmc.com/dwp/app/#/itemprofile/367
+Bitbuket token                  | https://bitbucket.globaldevtools.bbva.com/bitbucket/plugins/servlet/access-tokens/users/juanangel.rojo.contractor/manage
+Artifactory token               | https://artifactory.globaldevtools.bbva.com/ui/user_profile
+Helix Inci                      | https://itsmhelixbbva-dwp.onbmc.com/dwp/app/#/checkout
+
+
+Descripcion                     | Incident Kind | Envir      | BU/UG      | SER N1        | SER N2        
+--------------------------------|------------------------------------------------------------------------------------
+Ether Developer Console         | INCIDENT      | PRODUCTION | BBVA Spain | SW DEV TRANSF | SOPORTE/ADM L1 DEVELOPMENT EXPERIENCE
+
+
+## Querys NetCash
+
+Descripcion  | SQL        
+-------------|----------------------------------------------------
+Validar User | update BDUE.TBDUEUSA set XSN_TELCERTI='3',TIM_CAMBSITU = current_date WHERE COD_LOGONAPL = '20096935' and COD_USUARIO='USER1'
+...          | 
+
+## Urls Netcash
+
+Descripcion  | Url        
+-------------|----------
+FWG_EI       | https://ei-contratacionsstt.es.igrupobbva/SESETNC/etnc_mult_web_contratacionssttweb_01/controladoridentificacion/login
+Senda_EI     | https://ei-empresas.bbva.es/cells/apps/ES_ENCW_APP-ID-37117_DSG/P0014-login/deploy/cellsapp/int/novulcanize/index.html?view=full-web
+...          |
+
+## Activity Report
+
+* Fases Activables (facturables al BBVA)
+  * Analisis , Diseño , Desarrollo , Pruebas/Testeo , Implantacion
+
+* Fases No Activables
+  * Ideacion, Data Management, Project Management , Ceremonias Agile, Mantenimiento
