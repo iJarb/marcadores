@@ -67,6 +67,31 @@
                     </execution>
                 </executions>
             </plugin>
+		<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-antrun-plugin</artifactId>
+    <version>3.1.0</version>
+    <executions>
+        <execution>
+            <id>copiar-y-renombrar-a-book</id>
+            <!-- Se ejecuta automáticamente al compilar el proyecto -->
+            <phase>install</phase>
+            <goals>
+                <goal>run</goal>
+            </goals>
+            <configuration>
+                <target>
+                    <!-- Tarea de Ant: toma el JAR original de target y lo copia a la raíz como book.jar -->
+                    <copy file="${project.build.directory}/bookmarks-server-1.0-SNAPSHOT.jar" 
+                          tofile="${basedir}/book.jar" 
+                          overwrite="true" />
+                </target>
+                <!-- Evita llenar la terminal de logs innecesarios -->
+                <failOnError>true</failOnError>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
         </plugins>
     </build>
 </project>
