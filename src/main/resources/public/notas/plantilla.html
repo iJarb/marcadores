@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Titulo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/casual-markdown.css">
+    <script src="../js/casual-markdown.js"></script>
+    <style>  
+      body { line-height:1.5; margin:auto; padding:3px; max-width:1024px; display:none; font-family:"Segoe UI", Arial, sans-serif; 
+        background-image: url('../img/grunge_patterns.jpg');
+      }
+      h1  { font-size:200%; padding:16px; border:1px solid lightgrey; color:white; background: linear-gradient(to bottom right, #06C, #FC0) }
+      h2  { border-bottom:1px solid grey; padding:2px; color:teal }
+    </style>
+    
+    <script>
+      
+      function inicializarNota() {
+         document.body.innerHTML = md.html(document.body.innerHTML);
+         document.body.style.display = 'block';
+         const urlQR = 'https://tec-it.com' + encodeURIComponent(location.href);
+         document.getElementById('qrcode').src = urlQR;
+      }
+    </script>
+</head>
+<body onload="
+    document.body.innerHTML = md.html(document.body.innerHTML); 
+    document.body.style.display = 'block'; 
+    
+    let qr = document.createElement('img');
+    
+    let urlApi = new URL('https://quickchart.io/qr');
+    urlApi.searchParams.set('size', '70'); // Reducimos el tamaño de 120 a 70px
+    urlApi.searchParams.set('text', location.href);
+    
+    qr.src = urlApi.toString();
+    
+    qr.style.cssText = 'position: fixed; bottom: 15px; right: 15px; width: 70px; height: 70px; z-index: 1000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); opacity: 0.6; transition: opacity 0.3s;';
+    
+    qr.onmouseover = function() { this.style.opacity = '1'; };
+    qr.onmouseout = function() { this.style.opacity = '0.6'; };
+    
+    // 4. Lo añadimos al documento
+    document.body.appendChild(qr);
+">
+
+<span style="float:right;padding:6px;color:white"> 
+  <br>juanangel.rojobusto@gmail.com
+</span>
+# Cab1
+
+## Cab2
+
+## Cab3
+* l1
+* l2
+
+
+## Cab4
+
+* l1
+
+## Cab5
+* l1:
+  * l11
+  
+## Cab6
+
+
+H1    |H2.               | H3     | H4
+-------|-----------------|---------|-----------
+ C1  | C2                | C3     | C4
+ C1  | C2                | C3     | C4
+
+
+## FIN
+</body>
+</html>

@@ -1,22 +1,62 @@
 <!DOCTYPE html>
-<title>En Forma</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/casual-markdown.css">
-<script src="../js/casual-markdown.js"></script>
-<style>  
-  body { line-height:1.5; margin:auto; padding:3px; max-width:1024px; display:none; FONT-FAMILY:"SEGOE UI",ARIAL; 
-    background-image: url('../img/grunge_patterns.jpg');
-  }
-  h1  { font-size:200%; padding:16px; border:1px solid lightgrey; COLOR:WHITE; BACKGROUND: LINEAR-GRADIENT(TO BOTTOM RIGHT, #06C, #FC0) }
-  h2  { border-bottom:1px solid grey; padding:2px; COLOR:TEAL }
-</style>
-<body onload="document.body.innerHTML=md.html(document.body.innerHTML); document.body.style.display='block'; 
-              document.getElementById('qrcode').src='https://qrcode.tec-it.com/API/QRCode?size=small&dpi=120&data='+location.href" >
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>En Forma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/casual-markdown.css">
+    <script src="../js/casual-markdown.js"></script>
+    <style>  
+      body { line-height:1.5; margin:auto; padding:3px; max-width:1024px; display:none; font-family:"Segoe UI", Arial, sans-serif; 
+        background-image: url('../img/grunge_patterns.jpg');
+      }
+      h1  { font-size:200%; padding:16px; border:1px solid lightgrey; color:white; background: linear-gradient(to bottom right, #06C, #FC0) }
+      h2  { border-bottom:1px solid grey; padding:2px; color:teal }
+    </style>
+    
+    <script>
+      // Agrupamos el código aquí para no ensuciar el HTML con comillas conflictivas
+      function inicializarNota() {
+         // 1. Convertimos el Markdown
+         document.body.innerHTML = md.html(document.body.innerHTML);
+         
+         // 2. Mostramos el documento
+         document.body.style.display = 'block';
+         
+         // 3. Inyectamos de forma segura el código QR sin romper etiquetas
+         const urlQR = 'https://tec-it.com' + encodeURIComponent(location.href);
+         document.getElementById('qrcode').src = urlQR;
+      }
+    </script>
+</head>
+<body onload="
+    // 1. Convertimos el Markdown primero
+    document.body.innerHTML = md.html(document.body.innerHTML); 
+    document.body.style.display = 'block'; 
+    
+    // 2. Creamos la imagen del QR de forma dinámica y segura
+    let qr = document.createElement('img');
+    
+    let urlApi = new URL('https://quickchart.io/qr');
+    urlApi.searchParams.set('size', '70'); // Reducimos el tamaño de 120 a 70px
+    urlApi.searchParams.set('text', location.href);
+    
+    qr.src = urlApi.toString();
+    
+    // 3. Estilos CSS para fijarlo elegantemente abajo a la derecha
+    qr.style.cssText = 'position: fixed; bottom: 15px; right: 15px; width: 70px; height: 70px; z-index: 1000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); opacity: 0.6; transition: opacity 0.3s;';
+    
+    // Efecto visual: se vuelve más nítido si pasas el ratón por encima
+    qr.onmouseover = function() { this.style.opacity = '1'; };
+    qr.onmouseout = function() { this.style.opacity = '0.6'; };
+    
+    // 4. Lo añadimos al documento
+    document.body.appendChild(qr);
+">
 
 <span style="float:right;padding:6px;color:white"> 
-  <br>juanangel.rojobusto@email.com
+  <br>juanangel.rojobusto@gmail.com
 </span>
-
 # En Forma
 
 ## Comida
@@ -192,31 +232,34 @@ Zona|Sensacion    | %FC Max | FC(lat/min)
 ## Ejercicios Fisioterapia
 
 
-Descripcion                                                                | Url                                                | Autor 
----------------------------------------------------------------------|---------------------------------------------|-----------
- Por que caminar no sirve para recuperar tu rodilla. | https://youtu.be/ZAALr4PTs5U                | Marcos Sacristan
- Mi dolor de hombro desapareció con este ejercicio | https://www.youtube.com/watch?v=iGlNJGVkQI4 | Kelwin Juan
- Foeget Walking, Restoring Leg Strength                  | https://www.youtube.com/watch?v=fGXPTneLRAw | Strength and Shape 
- Alivio inmediato                                                         | https://www.youtube.com/watch?v=Wb4vdxI8YX8 | FisioActivo 
+Descripcion                                                                | Url                                                                                | Autor 
+---------------------------------------------------------------------|------------------------------------------------------------------------|-----------
+ Por que caminar no sirve para recuperar tu rodilla. | https://youtu.be/ZAALr4PTs5U                                      | Marcos Sacristan
+ Mi dolor de hombro desapareció con este ejercicio | https://www.youtube.com/watch?v=iGlNJGVkQI4        | Kelwin Juan
+ Foeget Walking, Restoring Leg Strength                  | https://www.youtube.com/watch?v=fGXPTneLRAw     | Strength and Shape 
+ Alivio inmediato                                                         | https://www.youtube.com/watch?v=Wb4vdxI8YX8.     | FisioActivo 
  Bursitis de hombro                                                    | https://www.youtube.com/watch?v=6WFmDYyCXmY | PhysioWods
- Tendinopatia del Manguito rotador                            | https://www.youtube.com/watch?v=i4XHfPe9KI0 | kinesaludtotal
- Ejercicios para artrosis de rodilla                               | https://www.youtube.com/watch?v=Ym7r-ZSv-7o | kinesaludtotal
- Eliminar el dolor de hombro                                       | https://www.youtube.com/watch?v=Z_-puHrnE00 | Pablo.Pilates
- Alivio dolor de rodilla                                                  | https://www.youtube.com/watch?v=OGJWlGhToWQ | ATHLEAN-X
- Dolor y pinzamiento hombros                                    | https://youtu.be/W45W4g662H8                | ATHLEAN-X
- Porque me duele el hombro                                       | https://www.youtube.com/watch?v=ZkvyxF4cyoc    | Oswaldo
- Liberate del dolor de hombro                                     | https://youtu.be/A7UdRrF5TGI                                 | Tomas Campos
- Nunca has entrenado fuerza                                      | https://youtu.be/ITKXqCi8xMQ                                 | Fuerte y Sano
- 8 ejercicios TRX                                                         | https://youtu.be/pJcxEhO_C08                                 | Fitness Freedom
- Clean up your kb                                                        | https://youtu.be/QfhvtlThs38                                     | Kelly Mathews
- 90% of Knee Pain Comes from THIS                         | https://youtu.be/I3nXJjhi8E4                                     | Zac Cupples   
- The Last Shoulder Video You'll Ever Need                 | https://youtu.be/33to-o5vW1g                                   | Zac Cupples
- TU FISIO EN CASA DC                                              | https://www.youtube.com/@tufisioencasadc/videos | fisioterapiadcl
-De Quervain's Tenosynovitis - How To Fix It               | https://youtu.be/_VIPHkVayII                                     | Dr. Yonatan Whitten
-Fix Wrist Pain Fast: 3 Easy Exercises | https://youtu.be/aynqFol9oVQ | Dr. Yonatan Whitten
+ Tendinopatia del Manguito rotador                            | https://www.youtube.com/watch?v=i4XHfPe9KI0        | kinesaludtotal
+ Ejercicios para artrosis de rodilla                               | https://www.youtube.com/watch?v=Ym7r-ZSv-7o       | kinesaludtotal
+ Eliminar el dolor de hombro                                       | https://www.youtube.com/watch?v=Z_-puHrnE00       | Pablo.Pilates
+ Alivio dolor de rodilla                                                  | https://www.youtube.com/watch?v=OGJWlGhToWQ  | ATHLEAN-X
+ Dolor y pinzamiento hombros                                    | https://youtu.be/W45W4g662H8                                  | ATHLEAN-X
+ Porque me duele el hombro                                       | https://www.youtube.com/watch?v=ZkvyxF4cyoc       | Oswaldo
+ Liberate del dolor de hombro                                     | https://youtu.be/A7UdRrF5TGI                                    | Tomas Campos
+ Nunca has entrenado fuerza                                      | https://youtu.be/ITKXqCi8xMQ                                    | Fuerte y Sano
+ 8 ejercicios TRX                                                         | https://youtu.be/pJcxEhO_C08                                    | Fitness Freedom
+ Clean up your kb                                                        | https://youtu.be/QfhvtlThs38                                        | Kelly Mathews
+ 90% of Knee Pain Comes from THIS                         | https://youtu.be/I3nXJjhi8E4                                        | Zac Cupples   
+ The Last Shoulder Video You'll Ever Need                 | https://youtu.be/33to-o5vW1g                                      | Zac Cupples
+ TU FISIO EN CASA DC                                              | https://www.youtube.com/@tufisioencasadc/videos.   | fisioterapiadcl
+De Quervain's Tenosynovitis - How To Fix It               | https://youtu.be/_VIPHkVayII                                        | Dr. Yonatan Whitten
+Fix Wrist Pain Fast: 3 Easy Exercises                        | https://youtu.be/aynqFol9oVQ                                       | Dr. Yonatan Whitten
 
+## Ejercicios Fitness
 
-
+Descripcion                                                                | Url                                                                        | Autor 
+---------------------------------------------------------------------|-----------------------------------------------------------------|-----------
+Abdominales oblicuos                                                | https://www.youtube.com/shorts/VcjmG4hG24Q | Green From
 
 
 Descripcion         | Url                                                | Autor
@@ -242,10 +285,7 @@ PESO | Tension | Gluc | GGT | Coles| LDL  | Fecha
 104  | 137/96  | 94   | 460 | 220  | 144  | 20241216
 95   | 141/96  | 82   | 591 | 249  | 146  | 20251218
 
-148 92
+
 ## FIN
-
-https://mapabalizasv16.es/#mapa
-
-Google DeepMind
-TranslatteGemma 
+</body>
+</html>

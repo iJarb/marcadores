@@ -6,6 +6,7 @@
         "nombre": "Vip",
         "enlaces": [
 		  {"titulo": "Cloud Search"      , "url": "https://cloudsearch.google.com/cloudsearch?authuser=0"},
+		  {"titulo": "Oficios tips"      , "url": "http://localhost:8080/notas/oficios_tips.html"},
           {"titulo": "CBP Oficios Scrum" , "url": "https://jira.globaldevtools.bbva.com/secure/RapidBoard.jspa?rapidView=48675"},
           {"titulo": "SDA_54277"         , "url": "https://jira.globaldevtools.bbva.com/browse/E2E-333441"},
           {"titulo": "Jiras BBVA Oficios", "url": "https://docs.google.com/spreadsheets/d/1eQw1LKgU48r8nr_6fkYAAWtCTUPdh1l_-LtZZwSt4sQ/edit?gid=0#gid=0"},
