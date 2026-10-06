@@ -32,10 +32,10 @@ public class App {
         app.post("/api/bookmarks", ctx -> guardarJson(ctx));
         app.post("/api/bookmarks/", ctx -> guardarJson(ctx));
 
-        System.out.println("====== Servidor Hyperclay Portable Activo ======");
+        System.out.println("====== Servidor Bookmarks Portable Activo ======");
         System.out.println("URL: http://localhost:" + port);
         System.out.println("================================================");
-
+/*
         try {
             if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
                 Desktop.getDesktop().browse(new URI("http://localhost:" + port));
@@ -43,6 +43,7 @@ public class App {
         } catch (Exception e) {
             // Modo headless
         }
+        */
     }
 
     private static void responderConJson(io.javalin.http.Context ctx) throws Exception {
