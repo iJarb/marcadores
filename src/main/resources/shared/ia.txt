@@ -1,0 +1,44 @@
+# Desactivar el tema por defecto de Oh My Zsh para meter el tuyo
+ZSH_THEME=""
+
+# Activar sustitución avanzada de comandos en el Prompt
+setopt prompt_subst
+
+# Función para abreviar los directorios padres a 1 letra y dejar el actual completo
+short_pwd() {
+  local current_dir="${PWD/#$HOME/~}"
+  if [[ "$current_dir" == "~" || "$current_dir" == "/" ]]; then
+    echo "$current_dir"
+    return
+  fi
+  
+  local -a parts=(${(s:/:)current_dir})
+  local result=""
+  
+  # Abreviar los padres a su primera letra
+  for i in {1..$((${#parts}-1))}; do
+    local part=$parts[$i]
+    if [[ "$part" == "~" ]]; then
+      result+="~/"
+    else
+      result+="${part[1]}/"
+    fi
+  done
+  
+  # Añadir el directorio actual completo
+  result+="$parts[-1]"
+  echo "$result"
+}
+
+# Configuración visual del Prompt (Símbolo Mac + Directorios + Git)
+PROMPT='%B%F{green}{▸}%f%b %B%F{yellow}$(short_pwd)%f%b $(git_prompt_info) '
+
+# Configurar el formato del texto de Git (Rama verde + Cruz roja)
+ZSH_THEME_GIT_PROMPT_PREFIX="on %B%F{green}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%f%b"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %B%F{red}✗%f%b"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+# Asegurar que el color de tus sugerencias siga en naranja brillante
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff6600"
+
